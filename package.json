@@ -1,0 +1,23 @@
+{
+  "name": "merhash",
+  "version": "0.0.0",
+  "description": "",
+  "main": "merhash.js",
+  "dependencies": {
+    "randomstring": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/passcod/merhash.git"
+  },
+  "author": "Félix Saparelli <https://passcod.name>",
+  "license": "Public Domain <https://passcod.name/PUBLIC.txt>",
+  "bugs": {
+    "url": "https://github.com/passcod/merhash/issues"
+  },
+  "homepage": "https://github.com/passcod/merhash"
+}

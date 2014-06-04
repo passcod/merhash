@@ -1,0 +1,5 @@
+gen.rs
+.*.sw*
+godname
+merhash
+node_modules
