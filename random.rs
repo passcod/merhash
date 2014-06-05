@@ -3,7 +3,8 @@ use std::rand;
 use std::rand::Rng;
 
 fn chr() -> Option<&u8> {
-  let alphabet = bytes!("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-[]{}^|\\`");
+  //let alphabet = bytes!("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-[]{}^|\\`");
+  let alphabet = bytes!("qwertyuiopasdfghjklzxcvbnm_");
   rand::task_rng().choose(alphabet)
 }
 

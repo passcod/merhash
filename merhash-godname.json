@@ -1,0 +1,22 @@
+{
+  "gen::make_a_30char_name": {
+    "noise": 1293.7,
+    "value": 15325.5
+  },
+  "gen::make_a_5char_name": {
+    "noise": 471.5,
+    "value": 1974.5
+  },
+  "gen::make_a_random_5_to_30_name": {
+    "noise": 531.1,
+    "value": 7720
+  },
+  "hash_a_generated": {
+    "noise": 864.5,
+    "value": 7842
+  },
+  "hash_a_static": {
+    "noise": 27.1,
+    "value": 68
+  }
+}

@@ -1,5 +1,7 @@
 #[cfg(test)] extern crate test;
 
+use std::fmt;
+use std::rand;
 use std::string::String;
 use std::vec::Vec;
 
@@ -18,7 +20,7 @@ enum Particle {
 }
 
 fn pick(typ: Particle) -> String {
-  let i: f32 = std::rand::random::<f32>();
+  let i: f32 = rand::random::<f32>();
   let len: uint = particles[typ as uint].len();
   let n: uint = (i * ((len - 1) as f32)).ceil() as uint;
   particles[typ as uint][n].to_string()
@@ -57,22 +59,44 @@ impl GodName {
   fn to_string(&mut self) -> String {
     let mut name = "".to_string();
     for piece in self.body.iter() {
-      name = format_args!(std::fmt::format, "{:s}{:s}", name, *piece);
+      name = format_args!(fmt::format, "{:s}{:s}", name, *piece);
     }
     name
   }
 }
 
 pub fn next() -> String {
-  let mut name = GodName {len: 30, body: Vec::new()};
+  let i: f32 = rand::random::<f32>();
+  let n: uint = (i * 24.0f32).ceil() as uint;
+  let mut name = GodName {len: n + 4, body: Vec::new()};
   name.build();
   name.to_string()
 }
 
 #[bench]
-fn make_a_name(b: &mut test::Bencher) {
+fn make_a_30char_name(b: &mut test::Bencher) {
   b.iter(|| {
     let mut name = GodName {len: 30, body: Vec::new()};
+    name.build();
+    name.to_string();
+  });
+}
+
+#[bench]
+fn make_a_5char_name(b: &mut test::Bencher) {
+  b.iter(|| {
+    let mut name = GodName {len: 5, body: Vec::new()};
+    name.build();
+    name.to_string();
+  });
+}
+
+#[bench]
+fn make_a_random_5_to_30_name(b: &mut test::Bencher) {
+  b.iter(|| {
+    let i: f32 = rand::random::<f32>();
+    let n: uint = (i * 24.0f32).ceil() as uint;
+    let mut name = GodName {len: n + 4, body: Vec::new()};
     name.build();
     name.to_string();
   });
