@@ -1,5 +1,6 @@
 var rs = require('randomstring');
 
+/* original hashCode - provided by mako */
 var hashCode = function(str){
   var hash = 0, i, char;
   if (str.length == 0) return hash;

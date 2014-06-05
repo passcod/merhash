@@ -6,6 +6,7 @@
 #include <vector>
 #include <cstring>
 namespace{  using namespace std;  }
+/* Copyright mako, All Rights Reserved */
 
 uint32_t hashCode(string& str){
 	uint32_t hash = 0, i, ch;

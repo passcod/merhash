@@ -1,3 +1,4 @@
+// Copyright mako, All Rights Reserved
 package controllers
 import util.Random
 
